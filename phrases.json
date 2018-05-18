@@ -1,0 +1,68 @@
+{
+	"class1":[
+		{
+			"phrase":"lame",
+			"suggestion":"This word is considered to be a slur. Use incompetent or halfhearted or be more specific about why there is a problem."
+		},
+		{
+			"phrase":"crippled",
+			"suggestion":"This word is considered to be a slur. Use hamstrung or held back or be more specific about why there is a problem."
+		},
+		{
+			"phrase":"handicapped",
+			"suggestion":"This word is considered to be a slur. Use hamstrung or held back or be more specific about why there is a problem."
+		},
+		{
+			"phrase":"illegal asylum seeker",
+			"suggestion":""
+		},
+		{
+			"phrase":"refugee",
+			"suggestion":"this is a suggestion"
+		}
+	],
+	"class2":[
+		{
+			"phrase":"citizen",
+			"suggestion":"Every community includes people who are not U.S. citizens. Use residents or members of a community unless you are using the term in a legal sense."
+		},
+		{
+			"phrase":"blind",
+			"suggestion":"Use only when referring to people with vision loss (check with them first). Reword when discussing decisionmakers that lack compassion or imagination."
+		},
+		{
+			"phrase":"deaf",
+			"suggestion":"Use only when referring to people with hearing loss (check with them first). Reword when discussing decisionmakers that are ignoring concerns."
+		},
+		{
+			"phrase":"ex-pat",
+			"suggestion":""
+		},
+		{
+			"phrase":"migrant",
+			"suggestion":"this is a suggestion"
+		}
+	],
+	"class3":[
+		{
+			"phrase":"his",
+			"suggestion":"It's a best practice to use gender neutral pronouns like they, them, and their if you haven't confirmed the person's gender identity."
+		},
+		{
+			"phrase":"her",
+			"suggestion":"It's a best practice to use gender neutral pronouns like they, them, and their if you haven't confirmed the person's gender identity."
+		},
+		{
+			"phrase":"legal alien",
+			"suggestion":""
+		},
+		{
+			"phrase":"naturalized",
+			"suggestion":""
+		},
+		{
+			"phrase":"illegal immigrant",
+			"suggestion":""
+		}
+	]
+}

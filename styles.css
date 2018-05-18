@@ -1,0 +1,52 @@
+mark.class1 {
+	background-color: #E9999A;
+}
+mark.class2 {
+	background-color: #FEE49D;
+}
+mark.class3 {
+	background-color: #B7D6AA;
+}
+mark.class1,mark.class2,mark.class3 {
+	cursor: help;
+	display: inline-block;
+	position: relative;
+}
+mark.class1::before,mark.class2::before,mark.class3::before {
+	width: 120px;
+	background-color: black;
+	color: #fff;
+	border-radius: 6px;
+	content: attr(data-suggestion);
+	font-family: sans-serif;
+	font-size: 14px;
+	left: 50%;
+	line-height: 110%;
+	margin-left: -60px;
+	margin-top: 10px;
+	padding: 7px 10px;
+	position: absolute;
+	text-align: left;
+	text-decoration: none;
+	text-transform: none;
+	top: 100%;
+	visibility: hidden;
+	width: 120px;
+	z-index: 1;
+}
+mark.class1::after,mark.class2::after,mark.class3::after {
+	border-width: 5px;
+	border-style: solid;
+	border-color: transparent transparent black transparent;
+	top: 100%;
+	content: " ";
+	left: 50%;
+	margin-right: -2px;
+	position: absolute;
+	visibility: hidden;
+	z-index: 1;
+}
+mark.class1:hover::before,mark.class2:hover::before,mark.class3:hover::before,
+mark.class1:hover::after,mark.class2:hover::after,mark.class3:hover::after {
+	visibility: visible;
+}

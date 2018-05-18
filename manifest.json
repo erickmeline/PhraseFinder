@@ -1,0 +1,28 @@
+{
+	"manifest_version": 2,
+	"name": "Chrome Extension PhraseFinder",
+	"description": "This extension highlights defined phrases in a web page",
+	"version": "1.0",
+	"homepage_url": "https://github.com/erickmeline-sc/PhraseFinder",
+	"browser_action": {
+		"default_title": "PhraseFinder"
+	},
+	"icons": {
+		"16": "icon16.png",
+		"48": "icon48.png",
+		"128": "icon128.png"
+	},
+	"content_scripts": [{
+		"matches": ["<all_urls>"],
+		"css": ["styles.css"],
+		"all_frames": true,
+		"js": ["content.js"]
+	}],
+	"web_accessible_resources": [
+		"phrases.json"
+	],
+	"permissions": [
+		"activeTab"
+	],
+	"content_security_policy": "script-src 'self'; object-src 'self'"
+}
