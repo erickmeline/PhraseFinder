@@ -33,14 +33,14 @@ const parsePage = (node, regex, callback) => {
 };
 
 const parseText = (phrases) => {
-	let entryPoint = document.getElementsByTagName('body')[0];
+	const entryPoint = document.getElementsByTagName('body')[0];
 	Object.keys(phrases).forEach(key => {
 		let phraseClassName = key;
 		let phraseGroup = phrases[key];
 		phraseGroup.forEach((phrase) => {
 			let phraseRegex = new RegExp('\\b' + phrase.phrase + '(?:es|s)?\\b','gi');
 			parsePage(entryPoint, phraseRegex, function(node, match, offset) {
-				var mark = document.createElement('mark');
+				let mark = document.createElement('mark');
 				mark.className = phraseClassName;
 				mark.textContent = match;
 				mark.dataset.suggestion = phrase.suggestion;
