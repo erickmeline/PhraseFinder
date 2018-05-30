@@ -1,6 +1,7 @@
 window.onload = function() {
 
-const url = chrome.extension.getURL('./phrases.json')
+const url = chrome.extension.getURL('./phrases.json');
+let loadedPhrases;
 
 fetch(url).then((response) => response.json()).then((json) => parseText(json));
 
@@ -33,6 +34,7 @@ const parsePage = (node, regex, callback) => {
 };
 
 const parseText = (phrases) => {
+	loadedPhrases = phrases;
 	const entryPoint = document.getElementsByTagName('body')[0];
 	Object.keys(phrases).forEach(key => {
 		let phraseClassName = key;
@@ -49,5 +51,15 @@ const parseText = (phrases) => {
 		});
 	});
 };
+
+MutationObserver = window.MutationObserver;
+let observer = new MutationObserver(function(mutations, observer) {
+	parseText(loadedPhrases);
+});
+
+observer.observe(document, {
+	subtree: true,
+	attributes: true
+});
 
 } // window.onload
