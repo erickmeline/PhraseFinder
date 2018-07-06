@@ -14,7 +14,7 @@
 		},
 		{
 			"phrase":"illegal asylum seeker",
-			"suggestion":""
+			"suggestion":"asd"
 		},
 		{
 			"phrase":"refugee",
@@ -24,7 +24,7 @@
 	"class2":[
 		{
 			"phrase":"citizen",
-			"suggestion":"Every community includes people who are not U.S. citizens. Use residents or members of a community unless you are using the term in a legal sense."
+			"suggestion":"Every community includes people who are not U.S. citizens. Use <b>residents</b> or <em><b>members of a community</b></em> unless you are using the term in a legal sense."
 		},
 		{
 			"phrase":"blind",
@@ -35,8 +35,8 @@
 			"suggestion":"Use only when referring to people with hearing loss (check with them first). Reword when discussing decisionmakers that are ignoring concerns."
 		},
 		{
-			"phrase":"ex-pat",
-			"suggestion":""
+			"phrase":"immigrant",
+			"suggestion":"qwe"
 		},
 		{
 			"phrase":"migrant",
@@ -54,15 +54,15 @@
 		},
 		{
 			"phrase":"legal alien",
-			"suggestion":""
+			"suggestion":"zxc"
 		},
 		{
 			"phrase":"naturalized",
-			"suggestion":""
+			"suggestion":"fgh"
 		},
 		{
 			"phrase":"illegal immigrant",
-			"suggestion":""
+			"suggestion":"rty"
 		}
 	]
 }
