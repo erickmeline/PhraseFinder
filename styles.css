@@ -12,41 +12,71 @@ mark.class1,mark.class2,mark.class3 {
 	display: inline-block;
 	position: relative;
 }
-mark.class1::before,mark.class2::before,mark.class3::before {
-	width: 120px;
-	background-color: black;
+#phrasesTooltip {
+	background: rgba(0, 0, 0, 0.6);
+	border-radius: 5px;
 	color: #fff;
-	border-radius: 6px;
-	content: attr(data-suggestion);
-	font-family: sans-serif;
 	font-size: 14px;
-	left: 50%;
-	line-height: 110%;
-	margin-left: -60px;
-	margin-top: 10px;
-	padding: 7px 10px;
+	font-style: normal;
+	font-weight: normal;
+	left: 0;
+	line-height: normal;
+	margin: 10px 0 0 0;
+	opacity: 0;
+	padding: 10px;
+	pointer-events: none;
 	position: absolute;
-	text-align: left;
+	text-align: center;
 	text-decoration: none;
-	text-transform: none;
-	top: 100%;
-	visibility: hidden;
-	width: 120px;
-	z-index: 1;
+	top: 0;
+	z-index: 9999;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-o-border-radius: 5px;
+	-ms-border-radius: 5px;
+	transition: opacity 0.5s ease-in-out;
+	-moz-transition: opacity 0.5s ease-in-out;
+	-webkit-transition: opacity 0.5s ease-in-out;
+	-o-transition: opacity 0.5s ease-in-out;
+	-ms-transition: opacity 0.5s ease-in-out;
 }
-mark.class1::after,mark.class2::after,mark.class3::after {
-	border-width: 5px;
-	border-style: solid;
-	border-color: transparent transparent black transparent;
-	top: 100%;
-	content: " ";
+#phrasesTooltip.top {
+	margin-top: 20px;
+}
+#phrasesTooltip.show {
+	font-style: normal;
+	margin-top: 10px;
+	opacity: 1;
+	pointer-events: all;
+	text-decoration: none;
+}
+#phrasesTooltip.show.top {
+	margin-top: 10px;
+}
+#phrasesTooltip:after {
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-top: 10px solid rgba(0, 0, 0, 0.6);
+	bottom: -10px;
+	content: '';
+	height: 0;
 	left: 50%;
-	margin-right: -2px;
+	margin-left: -10px;
 	position: absolute;
-	visibility: hidden;
-	z-index: 1;
+	width: 0;
 }
-mark.class1:hover::before,mark.class2:hover::before,mark.class3:hover::before,
-mark.class1:hover::after,mark.class2:hover::after,mark.class3:hover::after {
-	visibility: visible;
+#phrasesTooltip.top:after {
+	border-top-color: transparent;
+	border-bottom: 10px solid rgba(0, 0, 0, 0.6);
+	bottom: auto;
+	top: -20px;
+}
+#phrasesTooltip.left:after {
+	left: 10px;
+	margin: 0;
+}
+#phrasesTooltip.right:after {
+	left: auto;
+	margin: 0;
+	right: 10px;
 }
